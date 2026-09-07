@@ -28,7 +28,7 @@ export default function AuthScreen() {
     <div className="auth">
       <div className="auth-card">
         <p className="auth-eyebrow">Wedding HQ</p>
-        <h1 className="display auth-title">Brandon &amp; Courtney</h1>
+        <h1 className="display auth-title">Courtney &amp; Brandon</h1>
         <p className="auth-sub">Sign in to pick up where you left off.</p>
 
         {configError && <div className="notice notice-error">{configError}</div>}
