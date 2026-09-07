@@ -4,6 +4,8 @@ import AuthScreen from './auth/AuthScreen.jsx'
 import AppLayout from './components/AppLayout.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Placeholder from './pages/Placeholder.jsx'
+import Vendors from './pages/Vendors.jsx'
+import Venues from './pages/Venues.jsx'
 
 export default function App() {
   const { session, loading } = useAuth()
@@ -16,8 +18,8 @@ export default function App() {
       <Route element={<AppLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="planning" element={<Placeholder title="Planning" />} />
-        <Route path="vendors" element={<Placeholder title="Vendors" />} />
-        <Route path="venues" element={<Placeholder title="Venues" />} />
+        <Route path="vendors" element={<Vendors />} />
+        <Route path="venues" element={<Venues />} />
         <Route path="decisions" element={<Placeholder title="Decisions" />} />
         <Route path="budget" element={<Placeholder title="Budget" />} />
         <Route path="guests" element={<Placeholder title="Guests" />} />

@@ -179,3 +179,93 @@ input, select { font-family: inherit; font-size: 15px; }
   .foundation-list { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ================= Vendors + Venues ================= */
+.page-head.row { display: flex; justify-content: space-between; align-items: center; }
+.chips.scroll { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; margin-bottom: 16px; }
+.chips.scroll .chip { white-space: nowrap; }
+.inline-form.wide { grid-template-columns: 1fr; }
+.inline-form.wide select, .inline-form.wide input { width: 100%; }
+
+.pipeline-strip { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; margin-bottom: 18px; }
+.pipe-cell { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 10px 6px; text-align: center; }
+.pipe-n { display: block; font-family: 'Fraunces', serif; font-size: 20px; color: var(--ink); }
+.pipe-s { display: block; font-size: 10px; color: var(--muted); margin-top: 3px; line-height: 1.2; }
+
+.vendor-table { display: grid; gap: 8px; }
+.vendor-row { display: grid; grid-template-columns: 1fr auto auto auto; gap: 16px; align-items: center;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 14px 16px; text-align: left; width: 100%; }
+.vendor-row:hover { border-color: var(--sage-soft); background: var(--surface-2); }
+.vr-main { display: grid; gap: 2px; min-width: 0; }
+.vr-name { font-weight: 600; font-size: 15px; }
+.vr-cat { font-size: 13px; color: var(--muted); }
+.vr-ratings { display: grid; gap: 4px; }
+.vr-cost { font-weight: 600; font-size: 15px; min-width: 72px; text-align: right; }
+.flag.fav { color: var(--brick); }
+.flag.disc { color: var(--brass); }
+
+.status-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500;
+  padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.sb-dot { width: 7px; height: 7px; border-radius: 50%; }
+.tone-grey { background: #eceee7; color: var(--muted); } .tone-grey .sb-dot { background: var(--sage-soft); }
+.tone-brass { background: #f2ead9; color: #8a6d33; } .tone-brass .sb-dot { background: var(--brass); }
+.tone-sage { background: #e7ede0; color: var(--sage); } .tone-sage .sb-dot { background: var(--sage); }
+.tone-muted { background: #ececec; color: #999; } .tone-muted .sb-dot { background: #bbb; }
+
+.rating-dots { display: inline-flex; gap: 3px; }
+.rdot { width: 7px; height: 7px; border-radius: 50%; background: var(--line); }
+.rdot.on { background: var(--sage); }
+.rating-empty { color: var(--muted); font-size: 13px; }
+
+/* drawer */
+.drawer-scrim { position: fixed; inset: 0; background: rgba(35,41,31,.34); z-index: 30; display: flex; justify-content: flex-end; }
+.drawer { width: 420px; max-width: 92vw; height: 100%; background: var(--surface); overflow-y: auto;
+  padding: 22px; box-shadow: -12px 0 40px -20px rgba(35,41,31,.4); }
+.drawer-head { display: flex; gap: 10px; align-items: center; }
+.drawer-name { flex: 1; font-family: 'Fraunces', serif; font-size: 22px; border: none; border-bottom: 1px solid transparent;
+  background: transparent; color: var(--ink); padding: 4px 0; }
+.drawer-name:focus { border-bottom-color: var(--line); outline: none; }
+.drawer-cat { color: var(--muted); font-size: 13px; margin: 2px 0 18px; }
+.field { display: grid; gap: 6px; font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.field input, .field select, .field textarea { padding: 9px 11px; border: 1px solid var(--line);
+  border-radius: 7px; background: var(--surface); color: var(--ink); font-size: 14px; }
+.field-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.field-grid .field { margin-bottom: 10px; }
+.ratings-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.rating-picker { display: grid; gap: 6px; }
+.rp-label { font-size: 13px; color: var(--muted); }
+.rp-buttons { display: flex; gap: 5px; }
+.rp-btn { width: 30px; height: 30px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface);
+  color: var(--muted); font-size: 13px; }
+.rp-btn.on { background: var(--sage); color: #fff; border-color: var(--sage); }
+.drawer-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
+
+/* venue cards + comparison */
+.venue-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.venue-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.venue-card.picked { border-color: var(--sage); box-shadow: 0 0 0 1px var(--sage); }
+.vc-head { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; margin-bottom: 8px; }
+.vc-name { font-family: 'Fraunces', serif; font-size: 18px; background: none; border: none; padding: 0; text-align: left; color: var(--ink); }
+.vc-compare { font-size: 12px; color: var(--muted); display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.vc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0; }
+.vc-stats div { display: grid; gap: 2px; }
+.vc-stats dt { font-size: 11px; color: var(--muted); }
+.vc-stats dd { margin: 0; font-weight: 600; font-size: 14px; }
+.detail-form { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px; }
+.check-row { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--ink); margin: 4px 0 12px; }
+.check-row label { display: inline-flex; align-items: center; gap: 6px; }
+
+.panel.compare { margin-bottom: 20px; }
+.compare-scroll { overflow-x: auto; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.compare-table th, .compare-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.compare-table thead th { font-family: 'Fraunces', serif; font-weight: 500; font-size: 15px; }
+.compare-table tbody th { color: var(--muted); font-weight: 500; white-space: nowrap; }
+
+@media (max-width: 760px) {
+  .pipeline-strip { grid-template-columns: repeat(3, 1fr); }
+  .vendor-row { grid-template-columns: 1fr auto; row-gap: 8px; }
+  .field-grid { grid-template-columns: repeat(2, 1fr); }
+}
