@@ -6,6 +6,9 @@ import Dashboard from './pages/Dashboard.jsx'
 import Placeholder from './pages/Placeholder.jsx'
 import Vendors from './pages/Vendors.jsx'
 import Venues from './pages/Venues.jsx'
+import Guests from './pages/Guests.jsx'
+import Budget from './pages/Budget.jsx'
+import Planning from './pages/Planning.jsx'
 
 export default function App() {
   const { session, loading } = useAuth()
@@ -17,12 +20,12 @@ export default function App() {
     <Routes>
       <Route element={<AppLayout />}>
         <Route index element={<Dashboard />} />
-        <Route path="planning" element={<Placeholder title="Planning" />} />
+        <Route path="planning" element={<Planning />} />
         <Route path="vendors" element={<Vendors />} />
         <Route path="venues" element={<Venues />} />
         <Route path="decisions" element={<Placeholder title="Decisions" />} />
-        <Route path="budget" element={<Placeholder title="Budget" />} />
-        <Route path="guests" element={<Placeholder title="Guests" />} />
+        <Route path="budget" element={<Budget />} />
+        <Route path="guests" element={<Guests />} />
         <Route path="ideas" element={<Placeholder title="Ideas & Items" />} />
         <Route path="events" element={<Placeholder title="Events" />} />
         <Route path="documents" element={<Placeholder title="Documents" />} />
